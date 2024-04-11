@@ -7,7 +7,7 @@ const coolGreeting = (person) => {
 };
 
 const haveBirthday = (person) => {
-  const {name, age} = person;
+  // const {name, age} = person;
   person.age += 1;
 };
 
@@ -25,7 +25,8 @@ const carMaker = (name, maker, year) => {
   }
 };
 
-const weAreNotFriends = () => {
+const weAreNotFriends = (person) => {
+  return person.friends.pop();
 };
 
 const listHobbies = (person) => {

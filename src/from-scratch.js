@@ -36,18 +36,34 @@ const listHobbies = (person) => {
 };
 
 const getNextOpponent = (team) => {
-  // return team.matches[0][0];
-  team.matches.teamName(0);
+  if (team.matches.length > 0) {
+    return team.matches[0].teamName;
+  } else {
+    return null; 
+  }
+};
+const listAllKeys = (obj) => {
+  return Object.keys(obj);
 };
 
-const listAllKeys = () => {
+const listAllValues = (obj) => {
+  return Object.values(obj);
 };
 
-const listAllValues = () => {
+const convertToMatrix = (arrOfObjs) => {
+  let matrixArray = [];
+  if (arrOfObjs.length === 0) {
+    return [];
+  } 
+
+  matrixArray.push(Object.keys(arrOfObjs[0]));
+  for (let i = 0; i < arrOfObjs.length; i++) {
+    const obj = arrOfObjs[i];
+    matrixArray.push(Object.values((obj)));
+  }
+  return matrixArray;
 };
 
-const convertToMatrix = () => {
-};
 
 module.exports = {
   coolGreeting,

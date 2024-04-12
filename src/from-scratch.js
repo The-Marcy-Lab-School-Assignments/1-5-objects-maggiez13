@@ -52,17 +52,32 @@ const listAllValues = (obj) => {
 
 const convertToMatrix = (arrOfObjs) => {
   let matrixArray = [];
+
   if (arrOfObjs.length === 0) {
     return [];
   } 
 
   matrixArray.push(Object.keys(arrOfObjs[0]));
+
   for (let i = 0; i < arrOfObjs.length; i++) {
     const obj = arrOfObjs[i];
     matrixArray.push(Object.values((obj)));
   }
+  
   return matrixArray;
 };
+
+// const convertToMatrix = (arr) => {
+//   if (arr.length === 0) {
+//     return [];
+//   } 
+//   const keys = Object.keys(arr[0]);
+//   const result = [keys];
+//     for (let i = 0; i < arr.length; i++) {
+//       result.push(Object.values(arr[i]));
+//     }
+//   return result;
+// };
 
 
 module.exports = {

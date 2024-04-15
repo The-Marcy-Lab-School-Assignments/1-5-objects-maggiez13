@@ -52,18 +52,18 @@ const listAllValues = (obj) => {
 
 const convertToMatrix = (arrOfObjs) => {
   let matrixArray = [];
-
   if (arrOfObjs.length === 0) {
     return [];
   } 
-
   matrixArray.push(Object.keys(arrOfObjs[0]));
-
+    // pushes keys of first object into matrixArray
+      // will be header row of matrix
   for (let i = 0; i < arrOfObjs.length; i++) {
     const obj = arrOfObjs[i];
+      // gets current object in loop iteration
     matrixArray.push(Object.values((obj)));
+      // pushes values of current object into matrixArray
   }
-  
   return matrixArray;
 };
 
@@ -77,6 +77,16 @@ const convertToMatrix = (arrOfObjs) => {
 //       result.push(Object.values(arr[i]));
 //     }
 //   return result;
+// };
+
+// const convertToMatrix = (arr) => {
+//   if (arr[0] === undefined || arr[0] === null) return [];
+//   const totalArr = [];
+//   totalArr.push(Object.keys(arr[0]));
+//   for (let e in arr) {
+//     totalArr.push(Object.values(arr[e]));
+//   }
+//   return totalArr; 
 // };
 
 

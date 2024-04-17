@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job! You have all test cases passing! */
 const coolGreeting = (person) => {
   if(person.isCool === true) {
     return `What is UP ${person.name.toUpperCase()}? How you been doin'?`;
